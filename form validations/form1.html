@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+      <label for="user">username: </label>
+      <input type="text" id="user" name="username" autofocus><br>
+      <label for="password">password: </label>
+      <input type="password" id="password" name="password"><br>
+      <label for="confirm">confirm password: </label>
+      <input type="password" id="confirm" name="confirm password"><br>
+      <label for="email">Email: </label>
+      <input type="email" name="email" id="email"><br>
+      <label for="phone">Phone number: </label>
+      <input type="number" name="phonenumber" id="phone"><br>
+      <input type="button" value="submit" id="submit">
+
+    </form>
+    <script>
+        var sub=document.getElementById("submit")
+        sub.addEventListener("click",function(){
+            var user=document.getElementById('user')
+            var password=document.getElementById('password')
+            var confirmpass=document.getElementById('confirm')
+            var email=document.getElementById('email')
+            var phone=document.getElementById('phone')
+            var valid=true
+
+           if(user.value.match(/^[A-Z]/)){
+            console.log('starts with cap')
+           }
+           else{
+            valid=false
+            console.log('not starrs')
+           }
+
+           if(password.value.match(/\w/) && password.value.match(/\d/) && password.value.match(/[A-Z]/) && password.value.match(/\W/)){
+            console.log("strong password")
+           } 
+           else{
+            valid=false
+            console.log("weak password")
+           }
+
+           if(password.value==confirmpass.value){
+            console.log("both pass are matched")
+           }
+           else{
+            valid=false
+            console.log("not matched")
+           }
+
+
+           if(email.value.match(/@gmail.com$/)){
+            console.log("valid email")
+           }
+           else{
+            console.log('invalid email')
+            valid=false
+           }
+
+
+           if(phone.value.match(/^[9876]/) && phone.value.length==10){
+            console.log('valid number')
+           }
+           else{
+            console.log("invalid number")
+           }
+        })
+    </script>
+</body>
+</html>

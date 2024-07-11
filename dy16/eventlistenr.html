@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var store = [
+            {
+                "id": 1,
+                "title": "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
+                "price": 109.95,
+                "description": "Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
+                "category": "men's clothing",
+                "image": "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
+                "rating": {
+                    "rate": 3.9,
+                    "count": 120
+                }
+            },
+            // Other items...
+        ];
+
+        localStorage.setItem('data', JSON.stringify(store));
+        var data = JSON.parse(localStorage.getItem("data"));
+
+        var table = document.createElement('table');
+        table.style.width = "100%";
+        table.setAttribute("border", "1");
+
+        data.forEach((item, index) => {
+            var row = document.createElement('tr');
+
+            var td1 = document.createElement('td');
+            td1.innerText = item.id;
+
+            var td4 = document.createElement('td');
+            td4.innerText = item.title;
+
+            var td2 = document.createElement('td');
+            var img = document.createElement('img');
+            img.src = item.image;
+            img.width = '200';
+            img.height = '200';
+            td2.appendChild(img);
+
+            var td3 = document.createElement('td');
+            var but = document.createElement('button');
+            but.innerText = "Clear Me";
+
+            but.addEventListener("click", () => {
+                data.splice(index, 1);
+                localStorage.setItem('data', JSON.stringify(data));
+                row.remove();
+            });
+
+            td3.appendChild(but);
+
+            row.append(td1, td4, td2, td3);
+            table.appendChild(row);
+        });
+
+        document.body.appendChild(table);
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+

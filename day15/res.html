@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    
+
+    <script>
+
+        var h1=document.createElement("h1");
+        var hr=document.createElement("hr");
+        var marque=document.createElement("marquee");
+        var table=document.createElement("table")
+        var tr=document
+
+        h1.innerText='sanju bar and resturant'
+        var marqtext=document.createTextNode("the best food in hyd")
+
+       
+       
+       marque.appendChild(marqtext)
+       
+       
+       
+        h1.style.textAlign="center"
+        marque.style.background="black"
+        marque.style.color="white"
+
+      
+
+        document.body.appendChild(h1)
+        document.body.appendChild(hr)
+        document.body.appendChild(marque)
+
+        
+
+        var table=document.createElement('table');
+        table.style.width='100%'
+        table.style.borderCollapse = 'collapse';
+        table.setAttribute("border","1")
+        
+
+        var thead=document.createElement('thead')
+        var headrow=document.createElement('tr')
+        var headings=['nov veg items','price','veg items','price'];
+
+        for(var i=0;i<headings.length;i++){
+            var th=document.createElement('th');
+            th.innerText=headings[i];
+            headrow.appendChild(th);
+        }
+        
+        thead.appendChild(headrow)
+        table.appendChild(thead)
+        
+
+        var tbody=document.createElement('tbody');
+
+        var bodydata=[
+            ['chicken legpiece','250','mushroom','150'],
+            ['chicken dum biriyani','350','veg biriyani','250'],
+            ['frybiriyani','300','mushroom biriyani','300'],
+            ['mutton','400','thali','100'],
+            ['chicken legpiece','250','mushroom','150'],
+            ['chicken dum biriyani','350','veg biriyani','250'],
+            ['frybiriyani','300','mushroom biriyani','300'],
+            ['mutton','400','thali','100']
+        ]
+
+        for(var j=0;j<bodydata.length;j++){
+            var row=document.createElement('tr')
+            for(var k=0;k<bodydata[j].length;k++){
+                var td=document.createElement('td');
+                td.innerText=bodydata[j][k];
+                row.appendChild(td)
+            }
+            tbody.appendChild(row)
+
+        }
+
+        table.appendChild(tbody)
+        document.body.appendChild(table)
+
+
+        var details=document.createElement('details')
+        var summary=document.createElement('summary')
+        var img1=document.createElement('img')
+        var img2=document.createElement('img')
+        var img3=document.createElement('img')
+
+        summary.innerText='food items'
+
+        img1.src="https://th.bing.com/th/id/OIP.-ztsUQI-GTLFZ9D9BujFmAHaE8?rs=1&pid=ImgDetMain"
+        img1.width='300'
+        img1.height='300'
+        
+
+        img2.src="https://th.bing.com/th/id/OIP.-ztsUQI-GTLFZ9D9BujFmAHaE8?rs=1&pid=ImgDetMain"
+        img2.width='300'
+        img2.height='300'
+
+        img3.src="https://th.bing.com/th/id/OIP.-ztsUQI-GTLFZ9D9BujFmAHaE8?rs=1&pid=ImgDetMain"
+        img3.width='300'
+        img3.height='300'
+      
+
+        details.appendChild(summary);
+        details.appendChild(img1);
+        details.appendChild(img2);
+        details.appendChild(img3);
+
+        document.body.appendChild(details);
+        
+
+    </script>
+</body>
+</html>

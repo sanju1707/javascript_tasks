@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    div{
+        border: 2px solid black;
+        width: 300px;
+        height:500px;
+        
+    }
+</style>
+<body>
+    
+<div>
+    <h1></h1>
+    <img>
+    <p></p>
+
+</div>
+
+<script>
+    var data=JSON.parse(localStorage.getItem("fakestoredata"))
+    var div=document.getElementsByTagName('div')
+
+     var h1=document.getElementsByTagName("h1")
+     h1[0].innerText=data.title
+    
+     var img=document.getElementsByTagName("img")
+     img[0].src=data.image
+     img[0].width=150
+     img[0].height=150
+    
+     var p=document.getElementsByTagName('p')
+     p[0].innerText=data.description
+ 
+</script>
+</body>
+</html>

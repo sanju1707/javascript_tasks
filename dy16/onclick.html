@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="hel()">
+        hello
+    </button>
+    <script>
+         var but=document.getElementsByTagName('button')
+      
+        but[0].addEventListener("click",hel)
+        function hel(){
+            
+           alert("hii")
+            but[0].style.backgroundColor='blue'
+        }
+
+    </script>
+</body>
+</html>

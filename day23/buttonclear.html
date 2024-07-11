@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var div=document.createElement('div')
+        div.style.width="200px"
+        div.style.height="200px"
+        div.style.border="2px solid black"
+        
+        var but=document.createElement('button')
+        but.innerText="enter"
+
+        but.addEventListener("click",function(){
+            var user1=prompt("enter ur first name");
+            var password=prompt("enter ur password");
+
+            localStorage.setItem("userdet",user1)
+            localStorage.setItem("pass",password)
+            window.location.assign("./buttonuser.html")
+        })
+        div.append(but)
+
+        document.body.appendChild(div)
+    </script>
+</body>
+</html>

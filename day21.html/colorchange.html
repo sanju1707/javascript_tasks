@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    div{
+        border: 2px solid black;
+        margin-left: 30%;
+        margin-top: 10%;
+        width: 300px;
+        height:300px;
+    }
+</style>
+<body>
+    <script>
+        var div=document.createElement('div')
+        
+        var p1=document.createElement('p')
+        p1.textContent=" hi this is a pragragh please enter the colour name while promt say ..click the button to change colour"
+        var but=document.createElement('button')
+        but.innerText="change the colour"
+
+
+
+        but.addEventListener("click",function(){
+            var colour=prompt(" enter the colour name to change text colour")
+            p1.style.color=colour
+        })
+
+        div.append(p1,but)
+        document.body.appendChild(div)
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 class="hi">hi sanju</h1>
+    <h1 class="hi">hi sanju</h1>
+    <h1 class="hi">hi sanju</h1>
+    <h1 class="hi">hi sanju</h1>
+    <h1 class="hi">hi sanju</h1>
+    <script>
+        var text = document.getElementsByClassName("hi");
+        var colors = ["red", "blue", "green", "orange", "purple"];
+        
+      for(i=0;i<text.length;i++){
+        text[i].innerText=(i+1) + "hii sanjay";
+        text[i].style.color =colors[i]
+        console.log(text[i].innerText)
+      }
+    </script>
+</body>
+</html>

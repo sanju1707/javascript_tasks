@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        var div=document.createElement('div')
+        div.style.border='2px solid black'
+        div.style.width='500px'
+        div.style.height='500px'
+        var img=document.createElement('img')
+        img.src="https://www.w3schools.com/js/pic_bulboff.gif"
+        img.width='250'
+        img.height='250'
+
+          
+       
+      
+        var but=document.createElement('button')
+        but.innerText="on"
+
+        but.addEventListener("click",bulbon)
+        
+        function bulbon(){
+            if(but.innerText=='on'){
+                but.innerText='off'
+                img.src="https://www.w3schools.com/js/pic_bulbon.gif"  
+                div.style.boxShadow='inset 0px 0px 10px 10px yellow'
+            }
+
+            else if (but.innerText=='off'){
+                but.innerText='on'
+                  div.style.boxShadow='none'
+                img.src="https://www.w3schools.com/js/pic_bulboff.gif"    
+            }
+
+        }
+
+        div.appendChild(but)
+        div.appendChild(img)
+        document.body.appendChild(div)
+    </script>
+</body>
+</html>

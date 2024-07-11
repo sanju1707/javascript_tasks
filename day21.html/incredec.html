@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <style>
+        button{
+            display: inline-block;
+            width: 50px;
+            background-color: blue;
+            color: white;
+        }
+        p{
+            display: inline-block;
+            width: 70px;
+            border: 2px solid black;
+            margin-left: 5px;
+            margin-right: 5px;
+            text-align: center;
+        }
+    </style>
+<body>
+    <script>
+        var div=document.createElement('div')
+        var incre=document.createElement('button')
+        incre.innerText="+"
+        var decre=document.createElement('button')
+        decre.innerText="-"
+        var qty=document.createElement('p')
+        qty.innerText="0"
+       
+        incre.addEventListener("click",function(){
+            qty.innerText=++qty.innerText   
+            if(qty.innerText>0){
+                qty.style.color="green"
+            }
+        })
+        decre.addEventListener("click",function(){
+            if(qty.innerText>0){
+                qty.innerText=--qty.innerText
+            }
+        })
+
+      div.append(decre,qty,incre)
+      document.body.appendChild(div)
+    </script>
+</body>
+</html>
